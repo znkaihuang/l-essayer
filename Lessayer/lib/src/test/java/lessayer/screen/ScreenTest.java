@@ -13,7 +13,17 @@ class ScreenTest {
 	}
 	
 	@Test
-	void selectionScreenTest() {
-		SelectionScreen selection = new SelectionScreen();
+	void manuScreenTest() {
+		ManuScreen manu = new ManuScreen();
+	}
+	
+	@Test
+	void memorizeWordsScteenTest() {
+		MemorizeWordsScreen memorizeWords = new MemorizeWordsScreen();
+	}
+	
+	@Test
+	void enterWordScreenTest() {
+		EnterWordScreen enterWord = new EnterWordScreen();
 	}
 }

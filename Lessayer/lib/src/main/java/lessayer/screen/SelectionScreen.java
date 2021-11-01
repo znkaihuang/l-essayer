@@ -5,15 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class SelectionScreen {
+public abstract class SelectionScreen {
 	ArrayList<String> selectionList;
 	
-	public SelectionScreen() {
-		initailizeSelectionList();
-		printSelection();
-		readSelection();
-	}
-
 	public void printSelection() {
 		// TODO Auto-generated method stub
 		System.out.println("Qu'est-ce que voulez-vous faire?\n");
@@ -70,11 +64,6 @@ public class SelectionScreen {
 		// TODO Auto-generated method stub
 		System.out.println(indexOf + ": " + selection);
 	}
-
-	private void initailizeSelectionList() {
-		// TODO Auto-generated method stub
-		selectionList = new ArrayList<>();
-		selectionList.add("Mémoriser des mots");
-		selectionList.add("Pratiquer la grammaire");
-	}
+	
+	protected abstract void initailizeSelectionList();
 }
