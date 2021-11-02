@@ -9,7 +9,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class ReadWriteWord {
-	private static File indexFile = new File("/home/kevin/git/l-essayer/Lessayer/lib/src/main/resources/index");
+	private static String resourcePath = "/home/kevin/git/l-essayer/Lessayer/lib/src/main/resources/";
+	private static String indexFilePath = resourcePath + "index";
+	private static String dictionaryPath = resourcePath + "dictionary/";
+	private static File indexFile = new File(indexFilePath);
 	
 	public static boolean saveWord(Noun word) {
 		// TODO Auto-generated method stub
@@ -44,7 +47,7 @@ public class ReadWriteWord {
 		if(findWordIndex(string)) {
 			Noun returnWord = new Noun(string);
 			try(BufferedReader bufferedReader = new BufferedReader(
-					new FileReader("/home/kevin/git/l-essayer/Lessayer/lib/src/main/resources/dictionary/" + string))) {
+					new FileReader(dictionaryPath + string))) {
 				bufferedReader.readLine(); // word name
 				bufferedReader.readLine(); // word type
 				returnWord.setGender(bufferedReader.readLine());
@@ -84,7 +87,7 @@ public class ReadWriteWord {
 	
 	private static void saveWordContent(Noun word) {
 		// TODO Auto-generated method stub
-		File wordContent = new File("/home/kevin/git/l-essayer/Lessayer/lib/src/main/resources/dictionary/" + word.getWord());
+		File wordContent = new File(dictionaryPath + word.getWord());
 		try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(wordContent))) {
 			bufferedWriter.append(word.getWord() + '\n');
 			bufferedWriter.append(word.getType() + '\n');
