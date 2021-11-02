@@ -68,4 +68,25 @@ class WordTest {
 			System.out.println("The word \"" + word2.getWord() + "\" has already existed!");
 		}
 	}
+	
+	@Test
+	void loadWordTest() {
+		String string1 = "chien";
+		String string2 = "chat";
+		Noun word;
+		
+		if((word = ReadWriteWord.loadWord(string1)) != null) {
+			word.printWord();
+		}
+		else {
+			System.out.println("The word \"" + string1 + "\" does not exist.");
+		}
+		
+		if((word = ReadWriteWord.loadWord(string2)) != null) {
+			word.printWord();
+		}
+		else {
+			System.out.println("The word \"" + string2 + "\" does not exist.");
+		}
+	}
 }

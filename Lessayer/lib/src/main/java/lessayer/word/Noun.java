@@ -19,7 +19,7 @@ public class Noun extends Word {
 	
 	@Override
 	public void printWord() {
-		System.out.println(this.getWord() + " (" + this.getGender() + ")");
+		System.out.println(this.getWord() + " n." + this.getGender().charAt(0) + ".");
 		System.out.println("Définition:\n" + this.getDefinition());
 		System.out.println("Exemple:\n" + this.getExampleSentence());
 	}
