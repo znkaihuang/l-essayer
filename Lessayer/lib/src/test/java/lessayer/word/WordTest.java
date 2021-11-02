@@ -36,4 +36,36 @@ class WordTest {
 		assertEquals(gender, word.getGender());
 	}
 	
+	@Test
+	void saveWordTest() {
+		String definition1 = "dog";
+		String exampleSentence1 = "Ce qu'il y a de meilleur dans l'homme, c'est le chien.";
+		String gender1 = "masculine";
+		Noun word1 = new Noun("chien");
+		word1.setGender(gender1);
+		word1.setDefinition(definition1);
+		word1.setExampleSentence(exampleSentence1);
+		
+		if(ReadWriteWord.saveWord(word1)) {
+			System.out.println("Save the word \"" + word1.getWord() + "\" complete!");
+		}
+		else {
+			System.out.println("The word \"" + word1.getWord() + "\" has already existed!");
+		}
+		
+		String definition2 = "wolf";
+		String exampleSentence2 = "On n'est pas encore sorti du bois et le loup rôde toujours.";
+		String gender2 = "masculine";
+		Noun word2 = new Noun("loup");
+		word2.setGender(gender2);
+		word2.setDefinition(definition2);
+		word2.setExampleSentence(exampleSentence2);
+		
+		if(ReadWriteWord.saveWord(word2)) {
+			System.out.println("Save the word \"" + word2.getWord() + "\" complete!");
+		}
+		else {
+			System.out.println("The word \"" + word2.getWord() + "\" has already existed!");
+		}
+	}
 }
