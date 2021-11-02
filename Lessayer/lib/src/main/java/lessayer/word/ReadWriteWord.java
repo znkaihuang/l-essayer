@@ -21,14 +21,13 @@ public class ReadWriteWord {
 				saveWordContent(word);
 			}
 			else {
-				String wordIndex;
-				while((wordIndex = bufferedReader.readLine()) != null) {
-					if(wordIndex.compareTo(word.getWord()) == 0) {
-						return false;
-					}
+				if(findWordIndex(word.getWord())) {
+					return false;
 				}
-				bufferedWriter.append(word.getWord() + '\n');
-				saveWordContent(word);
+				else {
+					bufferedWriter.append(word.getWord() + '\n');
+					saveWordContent(word);
+				}
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -39,7 +38,50 @@ public class ReadWriteWord {
 		}
 		return true;
 	}
-
+	
+	public static Noun loadWord(String string) {
+		// TODO Auto-generated method stub
+		if(findWordIndex(string)) {
+			Noun returnWord = new Noun(string);
+			try(BufferedReader bufferedReader = new BufferedReader(
+					new FileReader("/home/kevin/git/l-essayer/Lessayer/lib/src/main/resources/dictionary/" + string))) {
+				bufferedReader.readLine(); // word name
+				bufferedReader.readLine(); // word type
+				returnWord.setGender(bufferedReader.readLine());
+				returnWord.setDefinition(bufferedReader.readLine());
+				returnWord.setExampleSentence(bufferedReader.readLine());
+				
+				return returnWord;
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+	
+	private static boolean findWordIndex(String string) {
+		// TODO Auto-generated method stub
+		String wordIndex;
+		try(BufferedReader bufferedReader = new BufferedReader(new FileReader(indexFile))) {
+			while((wordIndex = bufferedReader.readLine()) != null) {
+				if(wordIndex.compareTo(string) == 0) {
+					return true;
+				}
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
 	private static void saveWordContent(Noun word) {
 		// TODO Auto-generated method stub
 		File wordContent = new File("/home/kevin/git/l-essayer/Lessayer/lib/src/main/resources/dictionary/" + word.getWord());
@@ -54,5 +96,4 @@ public class ReadWriteWord {
 			e.printStackTrace();
 		}
 	}
-
 }
