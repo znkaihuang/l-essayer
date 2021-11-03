@@ -10,8 +10,8 @@ class ScreenTest {
 
 	@Test
 	void printWelcomScreenTest() {
-		WelcomeScreen welcom = new WelcomeScreen();
-		welcom.printWelcom();
+		WelcomeScreen welcome = new WelcomeScreen();
+		welcome.printWelcome();
 	}
 	
 	@Test

@@ -10,7 +10,7 @@ import lessayer.word.Word;
 public class AppMain {
 	public static void main(String[] args) {
 		WelcomeScreen welcomeScreen = new WelcomeScreen();
-		welcomeScreen.printWelcom();
+		welcomeScreen.printWelcome();
 		
 		MenuScreen menu = new MenuScreen();
 		menu.printSelection();
