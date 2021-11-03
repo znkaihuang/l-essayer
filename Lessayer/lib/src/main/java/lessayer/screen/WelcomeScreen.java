@@ -1,9 +1,16 @@
 package lessayer.screen;
 
+<<<<<<< HEAD
 public class WelcomeScreen {
 	private String welcomString;
 	
 	public WelcomeScreen() {
+=======
+public class WelcomScreen {
+	private String welcomString;
+	
+	public WelcomScreen() {
+>>>>>>> branch 'main' of git@github.com:znkaihuang/l-essayer.git
 		welcomString = "Bienvenue!";
 	}
 	
