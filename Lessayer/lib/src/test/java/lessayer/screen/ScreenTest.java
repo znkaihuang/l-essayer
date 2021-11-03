@@ -2,6 +2,9 @@ package lessayer.screen;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.ArrayList;
+import java.util.Map;
+
 import org.junit.jupiter.api.Test;
 
 import lessayer.word.Word;
@@ -34,5 +37,18 @@ class ScreenTest {
 		Word word = enterWord.readWord();
 		enterWord.printWord(word);
 		enterWord.continueOrQuit();
+	}
+	
+	@Test
+	void spellingQuizScreenInitializeTest() {
+		SpellingQuizScreen spellingQuiz = new SpellingQuizScreen();
+		spellingQuiz.initaillize();
+		
+		Map<Integer, String> dictionaryPair = spellingQuiz.getDictionaryPair();
+		ArrayList<Integer> indexList = spellingQuiz.getIndexList();
+		
+		for(Integer index : indexList) {
+			System.out.printf("%-3d: %-20s\n", index, dictionaryPair.get(index));
+		}
 	}
 }

@@ -100,4 +100,9 @@ public class ReadWriteWord {
 			e.printStackTrace();
 		}
 	}
+
+	public static String getIndexFilePath() {
+		// TODO Auto-generated method stub
+		return indexFilePath;
+	}
 }
