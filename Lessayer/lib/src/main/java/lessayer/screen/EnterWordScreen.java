@@ -11,12 +11,10 @@ public class EnterWordScreen {
 	private ArrayList<String> typeList;
 	
 	public EnterWordScreen(){
-		Word word = readWord();
-		printWord(word);
-		continueOrQuit();
+
 	}
 
-	private void continueOrQuit() {
+	public void continueOrQuit() {
 		// TODO Auto-generated method stub
 		while(true) {
 			System.out.println("Continuer à entrer un mot ou quitter? ");
@@ -27,6 +25,7 @@ public class EnterWordScreen {
 				if(bufferedReader.readLine().compareTo("y") == 0) {
 					Word word = readWord();
 					printWord(word);
+					ReadWriteWord.saveWord(word);
 				}
 				else {
 					break;
@@ -38,13 +37,13 @@ public class EnterWordScreen {
 		}
 	}
 
-	private void printWord(Word word) {
+	public void printWord(Word word) {
 		// TODO Auto-generated method stub
 		word.printWord();
 		
 	}
 
-	private Word readWord() {
+	public Word readWord() {
 		// TODO Auto-generated method stub
 		Word word = null;
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));

@@ -2,13 +2,11 @@ package lessayer.screen;
 
 import java.util.ArrayList;
 
-public class ManuScreen extends SelectionScreen {
+public class MenuScreen extends SelectionScreen {
 	
-	public ManuScreen() {
+	public MenuScreen() {
 		// TODO Auto-generated constructor stub
 		this.initailizeSelectionList();
-		this.printSelection();
-		this.readSelection();
 	}
 	
 	protected void initailizeSelectionList() {

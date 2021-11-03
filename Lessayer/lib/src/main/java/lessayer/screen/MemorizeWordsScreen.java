@@ -6,8 +6,6 @@ public class MemorizeWordsScreen extends SelectionScreen {
 	
 	public MemorizeWordsScreen() {
 		this.initailizeSelectionList();
-		this.printSelection();
-		this.readSelection();
 	}
 
 	protected void initailizeSelectionList() {

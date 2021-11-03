@@ -14,7 +14,7 @@ public class ReadWriteWord {
 	private static String dictionaryPath = resourcePath + "dictionary/";
 	private static File indexFile = new File(indexFilePath);
 	
-	public static boolean saveWord(Noun word) {
+	public static boolean saveWord(Word word) {
 		// TODO Auto-generated method stub
 		try(BufferedReader bufferedReader = new BufferedReader(new FileReader(indexFile));
 				BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(indexFile, true))) {
@@ -85,15 +85,16 @@ public class ReadWriteWord {
 		return false;
 	}
 	
-	private static void saveWordContent(Noun word) {
+	private static void saveWordContent(Word word) {
 		// TODO Auto-generated method stub
 		File wordContent = new File(dictionaryPath + word.getWord());
+		Noun nounWord = (Noun)word;
 		try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(wordContent))) {
-			bufferedWriter.append(word.getWord() + '\n');
-			bufferedWriter.append(word.getType() + '\n');
-			bufferedWriter.append(word.getGender() + '\n');
-			bufferedWriter.append(word.getDefinition() + '\n');
-			bufferedWriter.append(word.getExampleSentence() + '\n');
+			bufferedWriter.append(nounWord.getWord() + '\n');
+			bufferedWriter.append(nounWord.getType() + '\n');
+			bufferedWriter.append(nounWord.getGender() + '\n');
+			bufferedWriter.append(nounWord.getDefinition() + '\n');
+			bufferedWriter.append(nounWord.getExampleSentence() + '\n');
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

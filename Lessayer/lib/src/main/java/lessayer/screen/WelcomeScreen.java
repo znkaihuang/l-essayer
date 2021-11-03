@@ -1,9 +1,9 @@
 package lessayer.screen;
 
-public class WelcomScreen {
+public class WelcomeScreen {
 	private String welcomString;
 	
-	public WelcomScreen() {
+	public WelcomeScreen() {
 		welcomString = "Bienvenue!";
 	}
 	

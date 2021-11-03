@@ -3,8 +3,35 @@
  */
 package lessayer;
 
+import lessayer.screen.*;
+import lessayer.word.ReadWriteWord;
+import lessayer.word.Word;
+
 public class AppMain {
 	public static void main(String[] args) {
-
+		WelcomeScreen welcomeScreen = new WelcomeScreen();
+		welcomeScreen.printWelcom();
+		
+		MenuScreen menu = new MenuScreen();
+		menu.printSelection();
+		switch(menu.readSelection()) {
+			case 0:
+				MemorizeWordsScreen memorizeWords = new MemorizeWordsScreen();
+				memorizeWords.printSelection();
+				switch(memorizeWords.readSelection()) {
+					case 0:
+						EnterWordScreen enterWord = new EnterWordScreen();
+						Word word = enterWord.readWord();
+						enterWord.printWord(word);
+						ReadWriteWord.saveWord(word);
+						enterWord.continueOrQuit();
+						break;
+					case 1:
+						break;
+				}
+				break;
+			case 1:
+				break;
+		}
 	}
 }

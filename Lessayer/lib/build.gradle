@@ -35,5 +35,5 @@ tasks.named('test') {
 }
 
 application {
-	mainClass = 'Lessayer.AppMain'
+	mainClass = 'lessayer.AppMain'
 }
