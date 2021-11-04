@@ -51,4 +51,12 @@ class ScreenTest {
 			System.out.printf("%-3d: %-20s\n", index, dictionaryPair.get(index));
 		}
 	}
+	
+	@Test
+	void spellingQuizScreenTest() {
+		SpellingQuizScreen spellingQuiz = new SpellingQuizScreen();
+		spellingQuiz.initaillize();
+		spellingQuiz.showInterface();
+		spellingQuiz.startQuiz();
+	}
 }
