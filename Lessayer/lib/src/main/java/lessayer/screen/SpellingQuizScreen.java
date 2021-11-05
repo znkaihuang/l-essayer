@@ -57,7 +57,7 @@ public class SpellingQuizScreen {
 		System.out.println("Le quiz se termine.");
 	}
 
-	public void initaillize() {
+	public void initiallize() {
 		// TODO Auto-generated method stub
 		loadWordsFromDictionary();
 		shuffleWordIndex();

@@ -42,7 +42,7 @@ class ScreenTest {
 	@Test
 	void spellingQuizScreenInitializeTest() {
 		SpellingQuizScreen spellingQuiz = new SpellingQuizScreen();
-		spellingQuiz.initaillize();
+		spellingQuiz.initiallize();
 		
 		Map<Integer, String> dictionaryPair = spellingQuiz.getDictionaryPair();
 		ArrayList<Integer> indexList = spellingQuiz.getIndexList();
@@ -55,8 +55,23 @@ class ScreenTest {
 	@Test
 	void spellingQuizScreenTest() {
 		SpellingQuizScreen spellingQuiz = new SpellingQuizScreen();
-		spellingQuiz.initaillize();
+		spellingQuiz.initiallize();
 		spellingQuiz.showInterface();
 		spellingQuiz.startQuiz();
+	}
+	
+	@Test
+	void grammarScreenListRulesTest() {
+		GrammarScreen grammar = new GrammarScreen();
+		grammar.initialize();
+		grammar.getRuleFilesSorted().forEach(ruleFile -> System.out.println(ruleFile));
+	}
+	
+	@Test
+	void grammarScreenTest() {
+		GrammarScreen grammar = new GrammarScreen();
+		grammar.initialize();
+		// grammar.showInterface();
+		// grammar.startGrammar();
 	}
 }
