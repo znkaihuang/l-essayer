@@ -37,3 +37,7 @@ tasks.named('test') {
 application {
 	mainClass = 'lessayer.AppMain'
 }
+
+run {
+	standardInput = System.in
+}
