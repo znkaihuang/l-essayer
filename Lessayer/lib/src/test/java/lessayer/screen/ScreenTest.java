@@ -71,7 +71,7 @@ class ScreenTest {
 	void grammarScreenTest() {
 		GrammarScreen grammar = new GrammarScreen();
 		grammar.initialize();
-		// grammar.showInterface();
+		grammar.showInterface();
 		// grammar.startGrammar();
 	}
 }

@@ -38,13 +38,49 @@ public class GrammarScreen {
 	
 	public void showInterface() {
 		// TODO Auto-generated method stub
+		String title = "Les règles de grammaire";
+		StringBuilder frameBorder = new StringBuilder();
+		for(int index = 0; index < title.length() + 2; index++) {
+			frameBorder.append('=');
+		}
 		
+		System.out.println(frameBorder);
+		System.out.println(" " + title + " ");
+		System.out.println(frameBorder);
+		
+		showRuleList();
 	}
+
 
 	public void startGrammar() {
 		// TODO Auto-generated method stub
 		
 	}
 
-
+	private void showRuleList() {
+		// TODO Auto-generated method stub
+		
+		// Transform the file names to item names that would be show in the grammar list. 
+		for(String ruleFileName : this.ruleFilesSorted) {
+			StringBuilder ruleListItem = new StringBuilder();
+			String[] fractions = ruleFileName.split("_");
+			int fractionCount = 0;
+			for(String fraction : fractions) {
+				if(fractionCount == 0) {
+					ruleListItem.append(fraction + " ");
+					ruleListItem.replace(0, 1, String.valueOf(Character.toUpperCase(ruleListItem.charAt(0))));
+				}
+				else if(fractionCount == fractions.length - 1) {
+					if(Integer.valueOf(fraction) != null) {
+						ruleListItem.append("(" + fraction + ")");
+					}
+				}
+				else {
+					ruleListItem.append(fraction + " ");
+				}
+				fractionCount++;
+			}
+			System.out.println("Grammaire " + (ruleFilesSorted.indexOf(ruleFileName) + 1) + ": " + ruleListItem);
+		}
+	}
 }
