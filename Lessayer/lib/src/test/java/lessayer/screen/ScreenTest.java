@@ -12,7 +12,7 @@ import lessayer.word.Word;
 class ScreenTest {
 
 	@Test
-	void printWelcomScreenTest() {
+	void welcomScreenTest() {
 		WelcomeScreen welcome = new WelcomeScreen();
 		welcome.printWelcome();
 	}
@@ -72,6 +72,6 @@ class ScreenTest {
 		GrammarScreen grammar = new GrammarScreen();
 		grammar.initialize();
 		grammar.showInterface();
-		// grammar.startGrammar();
+		grammar.startGrammar();
 	}
 }

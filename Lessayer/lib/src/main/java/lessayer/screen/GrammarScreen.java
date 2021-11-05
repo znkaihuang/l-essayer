@@ -3,7 +3,12 @@
  */
 package lessayer.screen;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Set;
@@ -54,7 +59,47 @@ public class GrammarScreen {
 
 	public void startGrammar() {
 		// TODO Auto-generated method stub
+		System.out.println("Sélectionnez une règle pour commencer (1-" + this.ruleFilesSorted.size() + "):");
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		
+		try {
+			Integer grammarRuleIndex = Integer.valueOf(bufferedReader.readLine());
+			printGrammar(grammarRuleIndex);
+			
+			while(true) {
+				System.out.println("Continuer la suite? (Y\\n)");
+				if(bufferedReader.readLine().compareTo("Y") == 0 && grammarRuleIndex != ruleFilesSorted.size()) {
+					printGrammar(grammarRuleIndex++);
+				}
+				else {
+					System.out.println("C’est la dernière règle de grammaire!");
+					break;
+				}
+			}
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private void printGrammar(Integer grammarRuleIndex) {
+		// TODO Auto-generated method stub
+		try(BufferedReader bufferedReader = new BufferedReader(new FileReader(
+				this.ruleFilesDirectoryPath + "/" + this.ruleFilesSorted.get(grammarRuleIndex - 1)))) {
+			String content;
+			while((content = bufferedReader.readLine()) != null) {
+				System.out.println(content);
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	private void showRuleList() {
@@ -82,5 +127,6 @@ public class GrammarScreen {
 			}
 			System.out.println("Grammaire " + (ruleFilesSorted.indexOf(ruleFileName) + 1) + ": " + ruleListItem);
 		}
+		System.out.println();
 	}
 }
