@@ -27,10 +27,18 @@ public class AppMain {
 						enterWord.continueOrQuit();
 						break;
 					case 1:
+						SpellingQuizScreen spellingQuiz = new SpellingQuizScreen();
+						spellingQuiz.initiallize();
+						spellingQuiz.showInterface();
+						spellingQuiz.startQuiz();
 						break;
 				}
 				break;
 			case 1:
+				GrammarScreen grammar = new GrammarScreen();
+				grammar.initialize();
+				grammar.showInterface();
+				grammar.startGrammar();
 				break;
 		}
 	}

@@ -68,11 +68,16 @@ public class GrammarScreen {
 			
 			while(true) {
 				System.out.println("Continuer la suite? (Y\\n)");
-				if(bufferedReader.readLine().compareTo("Y") == 0 && grammarRuleIndex != ruleFilesSorted.size()) {
-					printGrammar(grammarRuleIndex++);
+				if(bufferedReader.readLine().compareTo("Y") == 0) {
+					if(grammarRuleIndex != ruleFilesSorted.size()) {
+						printGrammar(grammarRuleIndex++);
+					}
+					else {
+						System.out.println("C’est la dernière règle de grammaire!");
+						break;
+					}
 				}
 				else {
-					System.out.println("C’est la dernière règle de grammaire!");
 					break;
 				}
 			}
