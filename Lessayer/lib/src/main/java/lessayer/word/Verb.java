@@ -47,7 +47,7 @@ public class Verb extends Word {
 	@Override
 	public void printWord() {
 		System.out.println(this.getWord() + " v.");
-		System.out.println("Print conjugation table.");
+		System.out.println("Print the conjugation table.");
 		for(String conj : Verb.conjugationList) {
 			System.out.println(conj + ": " + this.getConjugation().get(conj));
 		}

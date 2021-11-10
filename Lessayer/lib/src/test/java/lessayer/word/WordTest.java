@@ -150,6 +150,27 @@ class WordTest {
 	}
 	
 	@Test
+	void adjectiveTest() {
+		String definition = "green";
+		String exampleSentence = "Il s’est assuré que le feu était vert avant de s’engager.";
+		HashMap<String, String> declension = new HashMap<>();
+		declension.put("masulinePlural", "verts");
+		declension.put("feminineSingular", "verte");
+		declension.put("femininePlural", "vertes");
+		
+		Adjective word = new Adjective("vert");
+		word.setDefinition("green");
+		word.setExampleSentence("Il s’est assuré que le feu était vert avant de s’engager.");
+		word.setDeclension(declension);
+		
+		word.printWord();
+		assertEquals("adjective", word.getType());
+		assertEquals(definition, word.getDefinition());
+		assertEquals(exampleSentence, word.getExampleSentence());
+		assertEquals(declension, word.getDeclension());
+	} 
+	
+	@Test
 	void saveWordTest() {
 		String definition1 = "dog";
 		String exampleSentence1 = "Ce qu'il y a de meilleur dans l'homme, c'est le chien.";

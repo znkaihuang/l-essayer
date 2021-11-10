@@ -5,8 +5,8 @@ public class Noun extends Word {
 	final static private String[] declensionList = {"plural"};
 	
 	public Noun(String word) {
-		super(word);
 		// TODO Auto-generated constructor stub
+		super(word);
 		this.setType("noun");
 	}
 	
