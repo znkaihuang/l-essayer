@@ -143,7 +143,7 @@ class WordTest {
 		word.setConjugation(conjugation);
 		
 		word.printWord();
-		assertEquals("noun", word.getType());
+		assertEquals("verb", word.getType());
 		assertEquals(definition, word.getDefinition());
 		assertEquals(exampleSentence, word.getExampleSentence());
 		assertEquals(conjugation, word.getConjugation());
