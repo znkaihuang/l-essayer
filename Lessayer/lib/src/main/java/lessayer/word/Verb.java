@@ -43,7 +43,18 @@ public class Verb extends Word {
 		super(word);
 		this.setType("verb");
 	}
-
+	
+	@Override
+	public void printWord() {
+		System.out.println(this.getWord() + " v.");
+		System.out.println("Print conjugation table.");
+		for(String conj : Verb.conjugationList) {
+			System.out.println(conj + ": " + this.getConjugation().get(conj));
+		}
+		System.out.println("Définition:\n" + this.getDefinition());
+		System.out.println("Exemple:\n" + this.getExampleSentence());
+	}
+	
 	public static String[] getConjugationlist() {
 		return conjugationList;
 	}
