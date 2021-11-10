@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import lessayer.word.*;
 
@@ -76,7 +77,9 @@ public class EnterWordScreen {
 			case 0: // Noun
 				Noun nounWord = new Noun(wordString);
 				System.out.println("Entrez le genre du mot: (masculin ou féminin)");
-				nounWord.setGender(bufferedReader.readLine());
+				HashMap<String, String> property = new HashMap<>();
+				property.put("gender", bufferedReader.readLine());
+				nounWord.setProperty(property);
 				word = nounWord;
 				break;
 			default:

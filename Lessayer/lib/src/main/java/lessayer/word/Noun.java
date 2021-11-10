@@ -1,8 +1,8 @@
 package lessayer.word;
 
 public class Noun extends Word {
-	private String gender;
-	private String plural;
+	final static private String[] propertyList = {"gender"};
+	final static private String[] declensionList = {"plural"};
 	
 	public Noun(String word) {
 		super(word);
@@ -10,26 +10,18 @@ public class Noun extends Word {
 		this.setType("noun");
 	}
 	
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-	
-	public String getGender() {
-		return this.gender;
-	}
-	
 	@Override
 	public void printWord() {
-		System.out.println(this.getWord() + " n." + this.getGender().charAt(0) + ".");
+		System.out.println(this.getWord() + " n." + this.getProperty().get("gender").charAt(0));
 		System.out.println("Définition:\n" + this.getDefinition());
 		System.out.println("Exemple:\n" + this.getExampleSentence());
 	}
 
-	public String getPlural() {
-		return plural;
+	public static String[] getPropertylist() {
+		return propertyList;
 	}
 
-	public void setPlural(String plural) {
-		this.plural = plural;
-	}
+	public static String[] getDeclensionlist() {
+		return declensionList;
+	}	
 }

@@ -1,10 +1,15 @@
 package lessayer.word;
 
+import java.util.HashMap;
+
 public class Word {
-	private String word;
-	private String type;
-	private String definition;
-	private String exampleSentence;
+	protected String word;
+	protected String type;
+	protected String definition;
+	protected String exampleSentence;
+	protected HashMap<String, String> property;
+	protected HashMap<String, String> conjugation;
+	protected HashMap<String, String> declension;
 	
 	public Word(String word) {
 		this.word = word;
@@ -40,5 +45,32 @@ public class Word {
 	
 	public void printWord() {
 		System.out.println(this.word);
+	}
+	
+	// Verb class must override the two methods: getConjugation() and setConjugation().
+	public HashMap<String, String> getConjugation() {
+		return conjugation;
+	}
+	
+	public void setConjugation(HashMap<String, String> conjugation) {
+		this.conjugation = conjugation;
+	}
+
+	// Noun and Adjective classes must override the two methods: getDeclension() and setDeclension().
+	public HashMap<String, String> getDeclension() {
+		return declension;
+	}
+
+	public void setDeclension(HashMap<String, String> declension) {
+		this.declension = declension;
+	}
+	
+	// Noun class has property "gender" which can be either "masculin" or "feminin".
+	public HashMap<String, String> getProperty() {
+		return property;
+	}
+
+	public void setProperty(HashMap<String, String> property) {
+		this.property = property;
 	}
 }

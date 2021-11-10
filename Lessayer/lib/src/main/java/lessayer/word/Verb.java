@@ -1,24 +1,42 @@
 package lessayer.word;
 
 public class Verb extends Word {
-	private String infinitive;
-	private String pastParticiple;
-	private String gerund;
-	private String[] indicativePresent;
-	private String[] indicativePresentPerfect;
-	private String[] indicativeImperfect;
-	private String[] indicativeFuture;
-	private String[] indicativeConditional;
-	private String[] indicativePastHistoric;
-	private String[] indicativePluperfect;
-	private String[] indicativeFuturePerfect;
-	private String[] indicativePastAnterior;
-	private String[] indicativeConditionalPerfect;
-	private String[] subjunctivePresent;
-	private String[] subjunctiveImperfect;
-	private String[] subjunctivePresentPerfect;
-	private String[] subjunctivePluperfect;
-	private String[] imperative;
+	// FS is the abbreviation for "first singular".
+	// SS is the abbreviation for "second singular".
+	// TS is the abbreviation for "third singular".
+	// FP is the abbreviation for "first plural".
+	// SP is the abbreviation for "second plural".
+	// TP is the abbreviation for "third plural".
+	final static private String[] conjugationList = {"infinitive", "pastParticiple", "gerund",
+													 "indicativePresentFS","indicativePresentSS","indicativePresentTS",
+													 "indicativePresentFP","indicativePresentSP","indicativePresentTP",
+													 "indicativePresentPerfectFS","indicativePresentPerfectSS","indicativePresentPerfectTS",
+													 "indicativePresentPerfectFP","indicativePresentPerfectSP","indicativePresentPerfectTP",
+													 "indicativeImperfectFS","indicativeImperfectSS","indicativeImperfectTS",
+													 "indicativeImperfectFP","indicativeImperfectSP","indicativeImperfectTP",
+													 "indicativeFutureFS","indicativeFutureSS","indicativeFutureTS",
+													 "indicativeFutureFP","indicativeFutureSP","indicativeFutureTP",
+													 "indicativeConditionalFS","indicativeConditionalSS","indicativeConditionalTS",
+													 "indicativeConditionalFP","indicativeConditionalSP","indicativeConditionalTP",
+													 "indicativePastHistoricFS","indicativePastHistoricSS","indicativePastHistoricTS",
+													 "indicativePastHistoricFP","indicativePastHistoricSP","indicativePastHistoricTP",
+													 "indicativePluperfectFS","indicativePluperfectSS","indicativePluperfectTS",
+													 "indicativePluperfectFP","indicativePluperfectSP","indicativePluperfectTP",
+													 "indicativeFuturePerfectFS","indicativeFuturePerfectSS","indicativeFuturePerfectTS",
+													 "indicativeFuturePerfectFP","indicativeFuturePerfectSP","indicativeFuturePerfectTP",
+													 "indicativePastAnteriorFS","indicativePastAnteriorSS","indicativePastAnteriorTS",
+													 "indicativePastAnteriorFP","indicativePastAnteriorSP","indicativePastAnteriorTP",
+													 "indicativeConditionalPerfectFS","indicativeConditionalPerfectSS","indicativeConditionalPerfectTS",
+													 "indicativeConditionalPerfectFP","indicativeConditionalPerfectSP","indicativeConditionalPerfectTP",
+													 "subjunctivePresentFS","subjunctivePresentSS","subjunctivePresentTS",
+													 "subjunctivePresentFP","subjunctivePresentSP","subjunctivePresentTP",
+													 "subjunctiveImperfectFS","subjunctiveImperfectSS","subjunctiveImperfectTS",
+													 "subjunctiveImperfectFP","subjunctiveImperfectSP","subjunctiveImperfectTP",
+													 "subjunctivePresentPerfectFS","subjunctivePresentPerfectSS","subjunctivePresentPerfectTS",
+													 "subjunctivePresentPerfectFP","subjunctivePresentPerfectSP","subjunctivePresentPerfectTP",
+													 "subjunctivePluperfectFS","subjunctivePluperfectSS","subjunctivePluperfectTS",
+													 "subjunctivePluperfectFP","subjunctivePluperfectSP","subjunctivePluperfectTP",
+													 "imperativeSS","imperativeFP","imperativeSP"};
 		
 	public Verb(String word) {
 		// TODO Auto-generated constructor stub
@@ -26,148 +44,7 @@ public class Verb extends Word {
 		this.setType("verb");
 	}
 
-	public String getInfinitive() {
-		return infinitive;
+	public static String[] getConjugationlist() {
+		return conjugationList;
 	}
-
-	public void setInfinitive(String infinitive) {
-		this.infinitive = infinitive;
-	}
-
-	public String getPastParticiple() {
-		return pastParticiple;
-	}
-
-	public void setPastParticiple(String pastParticiple) {
-		this.pastParticiple = pastParticiple;
-	}
-
-	public String getGerund() {
-		return gerund;
-	}
-
-	public void setGerund(String gerund) {
-		this.gerund = gerund;
-	}
-
-	public String[] getIndicativePresent() {
-		return indicativePresent;
-	}
-
-	public void setIndicativePresent(String[] indicativePresent) {
-		this.indicativePresent = indicativePresent;
-	}
-
-	public String[] getIndicativePresentPerfect() {
-		return indicativePresentPerfect;
-	}
-
-	public void setIndicativePresentPerfect(String[] indicativePresentPerfect) {
-		this.indicativePresentPerfect = indicativePresentPerfect;
-	}
-
-	public String[] getIndicativeImperfect() {
-		return indicativeImperfect;
-	}
-
-	public void setIndicativeImperfect(String[] indicativeImperfect) {
-		this.indicativeImperfect = indicativeImperfect;
-	}
-
-	public String[] getIndicativeFuture() {
-		return indicativeFuture;
-	}
-
-	public void setIndicativeFuture(String[] indicativeFuture) {
-		this.indicativeFuture = indicativeFuture;
-	}
-
-	public String[] getIndicativePastHistoric() {
-		return indicativePastHistoric;
-	}
-
-	public void setIndicativePastHistoric(String[] indicativePastHistoric) {
-		this.indicativePastHistoric = indicativePastHistoric;
-	}
-
-	public String[] getIndicativeConditional() {
-		return indicativeConditional;
-	}
-
-	public void setIndicativeConditional(String[] indicativeConditional) {
-		this.indicativeConditional = indicativeConditional;
-	}
-
-	public String[] getIndicativePluperfect() {
-		return indicativePluperfect;
-	}
-
-	public void setIndicativePluperfect(String[] indicativePluperfect) {
-		this.indicativePluperfect = indicativePluperfect;
-	}
-
-	public String[] getIndicativeFuturePerfect() {
-		return indicativeFuturePerfect;
-	}
-
-	public void setIndicativeFuturePerfect(String[] indicativeFuturePerfect) {
-		this.indicativeFuturePerfect = indicativeFuturePerfect;
-	}
-
-	public String[] getIndicativePastAnterior() {
-		return indicativePastAnterior;
-	}
-
-	public void setIndicativePastAnterior(String[] indicativePastAnterior) {
-		this.indicativePastAnterior = indicativePastAnterior;
-	}
-
-	public String[] getIndicativeConditionalPerfect() {
-		return indicativeConditionalPerfect;
-	}
-
-	public void setIndicativeConditionalPerfect(String[] indicativeConditionalPerfect) {
-		this.indicativeConditionalPerfect = indicativeConditionalPerfect;
-	}
-
-	public String[] getSubjunctivePresent() {
-		return subjunctivePresent;
-	}
-
-	public void setSubjunctivePresent(String[] subjunctivePresent) {
-		this.subjunctivePresent = subjunctivePresent;
-	}
-
-	public String[] getSubjunctiveImperfect() {
-		return subjunctiveImperfect;
-	}
-
-	public void setSubjunctiveImperfect(String[] subjunctiveImperfect) {
-		this.subjunctiveImperfect = subjunctiveImperfect;
-	}
-
-	public String[] getSubjunctivePresentPerfect() {
-		return subjunctivePresentPerfect;
-	}
-
-	public void setSubjunctivePresentPerfect(String[] subjunctivePresentPerfect) {
-		this.subjunctivePresentPerfect = subjunctivePresentPerfect;
-	}
-
-	public String[] getSubjunctivePluperfect() {
-		return subjunctivePluperfect;
-	}
-
-	public void setSubjunctivePluperfect(String[] subjunctivePluperfect) {
-		this.subjunctivePluperfect = subjunctivePluperfect;
-	}
-
-	public String[] getImperative() {
-		return imperative;
-	}
-
-	public void setImperative(String[] imperative) {
-		this.imperative = imperative;
-	}
-
 }

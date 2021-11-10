@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
 
 public class ReadWriteWord {
 	private static String resourcePath = "/home/kevin/git/l-essayer/Lessayer/lib/src/main/resources/";
@@ -50,7 +51,9 @@ public class ReadWriteWord {
 					new FileReader(dictionaryPath + string))) {
 				bufferedReader.readLine(); // word name
 				bufferedReader.readLine(); // word type
-				returnWord.setGender(bufferedReader.readLine());
+				HashMap<String, String> property = new HashMap<>();
+				property.put("gender", bufferedReader.readLine());
+				returnWord.setProperty(property);
 				returnWord.setDefinition(bufferedReader.readLine());
 				returnWord.setExampleSentence(bufferedReader.readLine());
 				
@@ -92,7 +95,7 @@ public class ReadWriteWord {
 		try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(wordContent))) {
 			bufferedWriter.append(nounWord.getWord() + '\n');
 			bufferedWriter.append(nounWord.getType() + '\n');
-			bufferedWriter.append(nounWord.getGender() + '\n');
+			bufferedWriter.append(nounWord.getProperty().get("gender") + '\n');
 			bufferedWriter.append(nounWord.getDefinition() + '\n');
 			bufferedWriter.append(nounWord.getExampleSentence() + '\n');
 		} catch (IOException e) {
