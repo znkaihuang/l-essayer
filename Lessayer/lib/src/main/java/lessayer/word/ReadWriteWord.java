@@ -43,17 +43,16 @@ public class ReadWriteWord {
 		return true;
 	}
 	
-	public static Noun loadWord(String string) {
+	public static Word loadWord(String string) {
 		// TODO Auto-generated method stub
 		if(findWordIndex(string)) {
-			Noun returnWord = new Noun(string);
+			Word returnWord;
 			try(BufferedReader bufferedReader = new BufferedReader(
 					new FileReader(dictionaryPath + string))) {
 				bufferedReader.readLine(); // word name
-				bufferedReader.readLine(); // word type
-				HashMap<String, String> property = new HashMap<>();
-				property.put("gender", bufferedReader.readLine());
-				returnWord.setProperty(property);
+				String type = bufferedReader.readLine(); // word type
+				returnWord = initWordType(string, type);
+				setTypeAttribute(returnWord, type, bufferedReader);
 				returnWord.setDefinition(bufferedReader.readLine());
 				returnWord.setExampleSentence(bufferedReader.readLine());
 				
@@ -69,6 +68,46 @@ public class ReadWriteWord {
 		return null;
 	}
 	
+	private static Word initWordType(String string, String type) {
+		// TODO Auto-generated method stub
+		Word returnWord = null;
+		if(type.compareTo("noun") == 0) {
+			returnWord = new Noun(string);
+		}
+		else if(type.compareTo("verb") == 0) {
+			returnWord = new Verb(string);
+		}
+		else if(type.compareTo("adjective") == 0) {
+			returnWord = new Adjective(string);
+		}
+		return returnWord;
+	}
+
+	private static void setTypeAttribute(Word returnWord, String type, BufferedReader bufferedReader) throws IOException {
+		// TODO Auto-generated method stub
+		if(type.compareTo("noun") == 0) {
+			HashMap<String, String> property = new HashMap<>();
+			for(String prop : Noun.getPropertylist()) {
+				property.put(prop, bufferedReader.readLine());
+			}
+			returnWord.setProperty(property);
+		}
+		else if(type.compareTo("verb") == 0) {
+			HashMap<String, String> conjugation = new HashMap<>();
+			for(String conj : Verb.getConjugationlist()) {
+				conjugation.put(conj, bufferedReader.readLine());
+			}
+			returnWord.setConjugation(conjugation);
+		}
+		else if(type.compareTo("adjective") == 0){
+			HashMap<String, String> declension = new HashMap<>();
+			for(String decl : Adjective.getDeclensionlist()) {
+				declension.put(decl, bufferedReader.readLine());
+			}
+			returnWord.setDeclension(declension);
+		}
+	}
+
 	private static boolean findWordIndex(String string) {
 		// TODO Auto-generated method stub
 		String wordIndex;

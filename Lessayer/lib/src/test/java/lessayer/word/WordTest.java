@@ -209,7 +209,9 @@ class WordTest {
 	void loadWordTest() {
 		String string1 = "chien";
 		String string2 = "chat";
-		Noun word;
+		String string3 = "aller";
+		String string4 = "vert";
+		Word word;
 		
 		if((word = ReadWriteWord.loadWord(string1)) != null) {
 			word.printWord();
@@ -223,6 +225,20 @@ class WordTest {
 		}
 		else {
 			System.out.println("The word \"" + string2 + "\" does not exist.");
+		}
+		
+		if((word = ReadWriteWord.loadWord(string3)) != null) {
+			word.printWord();
+		}
+		else {
+			System.out.println("The word \"" + string3 + "\" does not exist.");
+		}
+		
+		if((word = ReadWriteWord.loadWord(string4)) != null) {
+			word.printWord();
+		}
+		else {
+			System.out.println("The word \"" + string4 + "\" does not exist.");
 		}
 	}
 }
