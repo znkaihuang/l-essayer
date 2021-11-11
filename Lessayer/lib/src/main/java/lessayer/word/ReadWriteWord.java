@@ -80,6 +80,9 @@ public class ReadWriteWord {
 		else if(type.compareTo("adjective") == 0) {
 			returnWord = new Adjective(string);
 		}
+		else if(type.compareTo("adverb") == 0) {
+			returnWord = new Adverb(string);
+		}
 		return returnWord;
 	}
 
@@ -105,6 +108,9 @@ public class ReadWriteWord {
 				declension.put(decl, bufferedReader.readLine());
 			}
 			returnWord.setDeclension(declension);
+		}
+		else if(type.compareTo("adverb") == 0) {
+			
 		}
 	}
 

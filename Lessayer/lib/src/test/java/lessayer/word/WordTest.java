@@ -211,6 +211,7 @@ class WordTest {
 		String string2 = "chat";
 		String string3 = "aller";
 		String string4 = "vert";
+		String string5 = "tellement";
 		Word word;
 		
 		if((word = ReadWriteWord.loadWord(string1)) != null) {
@@ -239,6 +240,13 @@ class WordTest {
 		}
 		else {
 			System.out.println("The word \"" + string4 + "\" does not exist.");
+		}
+		
+		if((word = ReadWriteWord.loadWord(string5)) != null) {
+			word.printWord();
+		}
+		else {
+			System.out.println("The word \"" + string5 + "\" does not exist.");
 		}
 	}
 }
