@@ -1,6 +1,4 @@
 plugins {
-    // id 'java-library'
-    // id 'application'
     id 'java'
     id 'war'
     id "org.gretty" version "4.0.0"
@@ -33,11 +31,3 @@ war {
 //    classpath configurations.moreLibs // adds a configuration to the WEB-INF/lib dir.
     webXml = file('src/web.xml') // copies a file to WEB-INF/web.xml
 }
-
-//application {
-//	mainClass = 'lessayer.AppMain'
-//}
-//
-//run {
-//	standardInput = System.in
-//}
