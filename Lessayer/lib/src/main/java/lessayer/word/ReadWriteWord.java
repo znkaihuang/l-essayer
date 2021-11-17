@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class ReadWriteWord {
-	private static String resourcePath = "/home/kevin/git/l-essayer/Lessayer/lib/src/main/resources/";
+	private static String resourcePath = System.getProperty("user.dir") + "/src/main/resources/";
 	private static String indexFilePath = resourcePath + "index";
 	private static String dictionaryPath = resourcePath + "dictionary/";
 	private static File indexFile = new File(indexFilePath);
