@@ -2121,6 +2121,27 @@ ul.black-doted {
     color: #19c880;
 }
 
+.single-blog-post .page-header-overlay input[type="submit"] {
+    display: block;
+    padding: 16px 32px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    outline: none;
+    cursor: pointer;
+    background: #19c880;
+}
+
 .single-blog-post .page-header-overlay .entry-content .entry-content-example {
     font-size: 20px;
     font-weight: 400;
