@@ -2546,6 +2546,12 @@ ul.author-social-profile li:hover .fa {
     background: url(images/courses-header.jpg) no-repeat center;
 }
 
+.contact-page .page-header-overlay p {
+    margin-top: 8px;
+    color: #fff;
+    text-align: center;
+}
+
 .contact-page .contact-gmap {
     margin-top: 60px;
     box-shadow: 0 24px 38px rgba(81,107,117,.21);
@@ -2591,6 +2597,12 @@ ul.author-social-profile li:hover .fa {
 .contact-form input[type="email"]::placeholder,
 .contact-form textarea::placeholder {
     color: #c0c1cd;
+}
+
+.contact-form input[type="radio"],
+.contact-form label {
+    margin-top: 18px;
+    padding: 12px 20px;
 }
 
 .contact-form input[type="submit"] {
