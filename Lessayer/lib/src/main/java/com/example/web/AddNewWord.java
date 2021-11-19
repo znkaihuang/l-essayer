@@ -1,13 +1,12 @@
 package com.example.web;
 
 import com.example.model.*;
-import lessayer.word.*;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.io.*;
 import java.util.*;
 
-public class BeerSelect extends HttpServlet {
+public class AddNewWord extends HttpServlet {
 	
 	public void doPost(HttpServletRequest request,
 			HttpServletResponse response)
@@ -16,10 +15,16 @@ public class BeerSelect extends HttpServlet {
 		// response.setContentType("text/html");
 		// PrintWriter out = response.getWriter();
 		// out.println("Beer Selection Advice<br>");
-		String c = request.getParameter("color");
+		// String c = request.getParameter("word");
 		
-		BeerExpert be = new BeerExpert();
-		List result = be.getBrands(c);
+		
+		// BeerExpert be = new BeerExpert();
+		List result = new ArrayList<String>();
+		result.add(request.getParameter("word"));
+		result.add(request.getParameter("type"));
+		result.add(request.getParameter("conjug_declin"));
+		result.add(request.getParameter("definition"));
+		result.add(request.getParameter("example"));
 		
 		request.setAttribute("styles", result);
 		RequestDispatcher view = request.getRequestDispatcher("result.jsp");
