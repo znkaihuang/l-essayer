@@ -110,15 +110,15 @@
 
 
             <div class="col-12 col-lg-12">
-                <div class="contact-form form-check">
+                <div class="contact-form">
                     <%
-                    	List styles = (List) request.getAttribute("styles");
-                        out.print("<h3>Ajout réussi du mot" + styles.get(0) + " dans votre glossaire!</h3>");
+                        out.print("<h3>Ajout réussi du mot \"" + request.getAttribute("word") + "\" dans votre glossaire!</h3>");
 
-						Iterator it = styles.iterator();
-						while(it.hasNext()) {
-							out.print("<br>try: " + it.next());
-						}
+                		out.print("<p class=\"word\">" + request.getAttribute("word") + "</p>");
+                    	out.print("<p class=\"type\">" + request.getAttribute("type") + "</p>");
+                    	out.print("<p class=\"type\">" + request.getAttribute("conjug_declin") + "</p>");
+                    	out.print("<p class=\"definition\">" + request.getAttribute("definition") + "</p>");
+                    	out.print("<p class=\"example\">" + request.getAttribute("example") + "</p>");
 					%>
 					
                 </div><!-- .contact-form -->

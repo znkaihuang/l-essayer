@@ -2563,6 +2563,30 @@ ul.author-social-profile li:hover .fa {
     height: 540px;
 }
 
+.contact-form .word {
+    color: #19c880;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.contact-form .type {
+    color: #19c880;
+    font-size: 16px;
+    font-weight: 800;
+    margin-top: -4px;
+    margin-bottom: -4px;
+}
+
+.contact-form .definition {
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 1rem;
+}
+
+.contact-form .example {
+    font-size: 20px;
+}
+
 .contact-form,
 .contact-info {
     margin-top: 80px;

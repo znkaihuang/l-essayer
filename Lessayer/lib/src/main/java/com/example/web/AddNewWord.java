@@ -12,22 +12,20 @@ public class AddNewWord extends HttpServlet {
 			HttpServletResponse response)
 			throws IOException, ServletException {
 		
-		// response.setContentType("text/html");
-		// PrintWriter out = response.getWriter();
-		// out.println("Beer Selection Advice<br>");
-		// String c = request.getParameter("word");
-		
-		
 		// BeerExpert be = new BeerExpert();
-		List result = new ArrayList<String>();
-		result.add(request.getParameter("word"));
-		result.add(request.getParameter("type"));
-		result.add(request.getParameter("conjug_declin"));
-		result.add(request.getParameter("definition"));
-		result.add(request.getParameter("example"));
+		String word = request.getParameter("word");
+		String type = request.getParameter("type").toUpperCase();
+		String conjug_declin = request.getParameter("conjug_declin");
+		String definition = request.getParameter("definition");
+		String example = request.getParameter("example");
 		
-		request.setAttribute("styles", result);
-		RequestDispatcher view = request.getRequestDispatcher("result.jsp");
+		request.setAttribute("word", word);
+		request.setAttribute("type", type);
+		request.setAttribute("conjug_declin", conjug_declin);
+		request.setAttribute("definition", definition);
+		request.setAttribute("example", example);
+		
+		RequestDispatcher view = request.getRequestDispatcher("addWord.jsp");
 		view.forward(request, response);
 	}
 }
