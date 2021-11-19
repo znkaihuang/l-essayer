@@ -112,26 +112,30 @@
                 <div class="contact-form form-check">
                     <h3>La forme de mot</h3>
 
-                    <form>
-                        <input type="text" placeholder="Mot">
+                    <form method="POST" action="AddWord.do">
+                        <input type="text" placeholder="Mot" name="word"">
 					    <label class="radio-inline">
-					      <input type="radio" name="optradio"> Le masculin nom
+					      <input type="radio" name="type" value="masculin_noun"> Le masculin nom
 					    </label>
 					    <label class="radio-inline">
-					      <input type="radio" name="optradio"> Le féminin nom
+					      <input type="radio" name="type" value="feminin_noun"> Le féminin nom
+					    </label>
+					    
+					    <!-- Verbs, adjectives, and adverbs are not ready now.  
+					    <label class="radio-inline">
+					      <input type="radio" name="type" value="verb"> Le verbe
 					    </label>
 					    <label class="radio-inline">
-					      <input type="radio" name="optradio"> Le verbe
+					      <input type="radio" name="type" value="adjective"> L'adjectif
 					    </label>
 					    <label class="radio-inline">
-					      <input type="radio" name="optradio"> L'adjectif
+					      <input type="radio" name="type" value="adverb"> L'adverbe
 					    </label>
-					    <label class="radio-inline">
-					      <input type="radio" name="optradio"> L'adverbe
-					    </label>
-                        <input type="text" placeholder="Conjugaison/Déclinaison">
-                        <input type="text" placeholder=Définition>
-                        <textarea placeholder="Exemple de phrase" rows="2"></textarea>
+					    -->
+					    
+                        <input type="text" placeholder="Conjugaison/Déclinaison" name="conjug_declin">
+                        <input type="text" placeholder=Définition name="definition">
+                        <textarea placeholder="Exemple de phrase" rows="2" name="example"></textarea>
                         <input type="submit" value="soumettre">
                     </form>
                 </div><!-- .contact-form -->
