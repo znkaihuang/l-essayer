@@ -4,13 +4,13 @@
 	version="2.4">
 
 <servlet>
-	<servlet-name>Ch3 Beer</servlet-name>
-	<servlet-class>com.example.web.BeerSelect</servlet-class>
+	<servlet-name>Add Word</servlet-name>
+	<servlet-class>com.example.web.AddNewWord</servlet-class>
 </servlet>
 
 <servlet-mapping>
-	<servlet-name>Ch3 Beer</servlet-name>
-	<url-pattern>/SelectBeer.do</url-pattern>
+	<servlet-name>Add Word</servlet-name>
+	<url-pattern>/AddWord.do</url-pattern>
 </servlet-mapping>
 
 </web-app>
