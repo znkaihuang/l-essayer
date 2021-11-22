@@ -21,32 +21,31 @@ public class SQLDatabase {
             System.out.println("Connected");
             Statement stat = conn.createStatement();
             
-            // Insert data
-            // int num = stat.executeUpdate("insert into IndexTable (word, type) values ('chien', 'noun');");
+            //Insert data
+            int num = stat.executeUpdate("insert into IndexTable (word, type) values ('chien', 'noun');");
             
             // Search data and print the search result
-            // ResultSet resultSet = stat.executeQuery("Select * From IndexTable");
-            //
-            // while (resultSet.next()) {
-            //    String word =  resultSet.getString("word");
-            //    String type =  resultSet.getString("type");
-            //    String label =  resultSet.getString("label");
-            //    Date generate_date =  resultSet.getDate("generate_date");
-            //  
-            //	System.out.println("================================");
-            //	System.out.println(word);
-            //	System.out.println(type);
-            //  System.out.println(label);
-            //  System.out.println(generate_date);
-            //  System.out.println("================================");
-            // }
+            ResultSet resultSet = stat.executeQuery("Select * From IndexTable");
+            
+            while (resultSet.next()) {
+                String word =  resultSet.getString("word");
+                String type =  resultSet.getString("type");
+                Date generate_date =  resultSet.getDate("generate_date");
+               
+                System.out.println("================================");
+                System.out.println(word);
+                System.out.println(type);
+                System.out.println(generate_date);
+                System.out.println("================================");
+            }
             
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			System.out.println("Duplicate word!");
 		}
 	}
 	
