@@ -1482,6 +1482,22 @@ a.btn:hover {
     text-align: center;
 }
 
+.single-courses-page table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.single-courses-page td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.single-courses-page tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 @media screen and (max-width: 992px){
     .single-courses-page .featured-image {
         margin-top: 80px;
