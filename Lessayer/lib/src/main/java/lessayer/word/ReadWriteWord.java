@@ -7,6 +7,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.HashMap;
 
 public class ReadWriteWord {
@@ -39,6 +44,32 @@ public class ReadWriteWord {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		return true;
+	}
+	
+	public static boolean saveWordToDatabase(Word word) {
+		// TODO Auto-generated method stub
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/l_essayer", "zkhuang", "!Ohmygod123");
+			
+			String queryDescrip = "insert into IndexTable (word, type, property, description, example) values (?,?,?,?,?)";
+			PreparedStatement stat = conn.prepareStatement(queryDescrip); 
+			stat.setString(1, word.getWord());
+			stat.setString(2, word.getType());
+			stat.setString(3, word.getProperty().get("gender"));
+			stat.setString(4, word.getDefinition());
+			stat.setString(5, word.getExampleSentence());
+			stat.executeUpdate();  
+
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
 		}
 		return true;
 	}
