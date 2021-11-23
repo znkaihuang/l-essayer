@@ -1,3 +1,6 @@
+<%@ page import="java.util.*" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,19 +100,14 @@
                         <header class="entry-header">
                             <h1 class="entry-title">Commencer le défi des mots en ligne pour tester ce les mots que vous apprenez!</h1>
                             <div class="entry-content">
-                                Le défi contient des tests d’orthographe. Chaque question aura une 
-                                phrase et un espace à remplir. Trouvez le mot qui convient dans le
-                                phrase et replissez le espace. Vous pouvez trouver quelques 
-                                allusions suite à la question.<br><br>
-	                            <div class="entry-content-example">
-	                                Exemple:<br>
-	                                Q1: La v___e est un animal qui produit du lait.<br>
-									(indice: cow)<br>
-									R: vache
-							    </div>
-							   
-							    <form action="SpellingTest.do">
-							    	<input type="submit" name="action" value="Commencez!">
+	                            <%
+	                            out.println("Exemple:<br>");
+	                            out.println("Q" + request.getAttribute("questionID") + ": La v___e est un animal qui produit du lait.<br>");
+	                            out.println("(indice: cow)<br>");
+	                            out.println("R: vache");
+	                            %>
+							    <form>
+							    	<input type="submit" value="Continuez">
 							    </form>
                            
                            </div><!-- .entry-content -->
