@@ -2124,8 +2124,8 @@ ul.black-doted {
 
 .single-blog-post .page-header-overlay .entry-content {
     margin-top: 40px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 80px;
@@ -2189,6 +2189,16 @@ ul.black-doted {
 .single-blog-post .page-header .post-comments a {
     text-decoration: none;
     color: #fff;
+}
+
+.single-blog-post .page-header-overlay input[type=text] {
+    width: 25%;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
 }
 
 .single-blog-post .featured-image {
