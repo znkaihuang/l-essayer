@@ -2,6 +2,7 @@ package lessayer.word;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.junit.jupiter.api.Test;
@@ -247,6 +248,19 @@ class WordTest {
 		}
 		else {
 			System.out.println("The word \"" + string5 + "\" does not exist.");
+		}
+	}
+	
+	@Test
+	void loadWordFromDatabaseTest() {
+		ArrayList<HashMap<String, String>> questionArray = ReadWriteWord.loadWordFromDatabase(5);
+		
+		for(HashMap<String, String> question : questionArray) {
+			System.out.println("==============================");
+			System.out.println(question.get("word"));
+			System.out.println(question.get("description"));
+			System.out.println(question.get("example"));
+			System.out.println("==============================");
 		}
 	}
 }

@@ -8,10 +8,13 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ReadWriteWord {
@@ -97,6 +100,42 @@ public class ReadWriteWord {
 			}
 		}
 		return null;
+	}
+
+	public static ArrayList<HashMap<String, String>> loadWordFromDatabase(int questionNum) {
+		// TODO Auto-generated method stub
+		ArrayList<HashMap<String, String>> questionArray = null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/l_essayer", "zkhuang", "!Ohmygod123");
+			
+			String queryDescrip = "select * from IndexTable order by rand() limit ?";
+			PreparedStatement stat = conn.prepareStatement(queryDescrip); 
+			stat.setInt(1, questionNum);
+			
+			ResultSet resultSet = stat.executeQuery();
+			questionArray = new ArrayList<>();
+			
+            while (resultSet.next()) {
+                String word =  resultSet.getString("word");
+                String description = resultSet.getString("description");
+                String example  = resultSet.getString("example");
+                
+                HashMap<String, String> question = new HashMap<>();
+                question.put("word", word);
+                question.put("description", description);
+                question.put("example", example);
+                questionArray.add(question);
+            }
+		}
+		catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return questionArray;
 	}
 	
 	private static Word initWordType(String string, String type) {
