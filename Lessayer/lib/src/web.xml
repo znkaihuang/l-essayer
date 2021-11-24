@@ -6,15 +6,27 @@
 <servlet>
 	<servlet-name>Add Word</servlet-name>
 	<servlet-class>com.example.web.AddNewWord</servlet-class>
+</servlet>
+<servlet>
 	<servlet-name>Spelling Test</servlet-name>
 	<servlet-class>com.example.web.SpellingTest</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>Judge Test</servlet-name>
+	<servlet-class>com.example.web.TestJudge</servlet-class>
 </servlet>
 
 <servlet-mapping>
 	<servlet-name>Add Word</servlet-name>
 	<url-pattern>/AddWord.do</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
 	<servlet-name>Spelling Test</servlet-name>
 	<url-pattern>/SpellingTest.do</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>Judge Test</servlet-name>
+	<url-pattern>/JudgeTest.do</url-pattern>
 </servlet-mapping>
 
 </web-app>
