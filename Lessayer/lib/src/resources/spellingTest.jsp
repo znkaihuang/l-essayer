@@ -98,16 +98,25 @@
                 <div class="row">
                     <div class="col-12">
                         <header class="entry-header">
-                            <h1 class="entry-title">Commencer le défi des mots en ligne pour tester ce les mots que vous apprenez!</h1>
                             <div class="entry-content">
 	                            <%
-	                            out.println("Exemple:<br>");
-	                            out.println("Q" + request.getAttribute("questionID") + ": La v___e est un animal qui produit du lait.<br>");
-	                            out.println("(indice: cow)<br>");
-	                            out.println("R: vache");
+	                            ArrayList<HashMap<String, String>> questions = (ArrayList<HashMap<String, String>>)request.getAttribute("questions");
+	                            
+	                            int questionId = 1;
+	                            for(HashMap<String, String> question : questions) {
+	                            	out.println("<div class=\"entry-content-example\">");
+	                            	out.println("Q" + questionId + ":" + question.get("example") + "<br>");
+	                            	out.println("(indice: " + question.get("description") + ")");
+	                            	out.println("</div>");
+	                            	
+	                            	out.println("<form>");
+	                            	out.println("<input type=\"text\" name=\"answer" + questionId + "\">");
+	                            	out.println("</form>");
+	                            	questionId++;
+	                            }
 	                            %>
-							    <form>
-							    	<input type="submit" value="Continuez">
+							    <form action=JudgeTest.do method="post">
+							    	<input type="submit" value="Soumettez">
 							    </form>
                            
                            </div><!-- .entry-content -->
