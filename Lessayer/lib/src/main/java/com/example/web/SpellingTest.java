@@ -25,13 +25,12 @@ public class SpellingTest extends HttpServlet {
 		ArrayList<HashMap<String, String>> questionArray = prepareQuestion.getQuestionArray();
 		request.setAttribute("questions", questionArray);
 		
-		StringBuilder answers = new StringBuilder();
+		int id = 1;
 		for(String answer : prepareQuestion.getAnswerArray()) {
-			answers.append(answer + "&");
+			Cookie cookie = new Cookie("correct-answer-" + String.valueOf(id++), answer);
+			cookie.setMaxAge(30 * 60);
+			response.addCookie(cookie);
 		}
-		Cookie cookie = new Cookie("answers", answers.toString());
-		cookie.setMaxAge(30 * 60);
-		response.addCookie(cookie);
 		
 		RequestDispatcher view = request.getRequestDispatcher("spellingTest.jsp");
 		view.forward(request, response);

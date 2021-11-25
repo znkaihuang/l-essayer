@@ -99,6 +99,7 @@
                     <div class="col-12">
                         <header class="entry-header">
                             <div class="entry-content">
+                                <form method="POST" action="JudgeTest.do" >
 	                            <%
 	                            ArrayList<HashMap<String, String>> questions = (ArrayList<HashMap<String, String>>)request.getAttribute("questions");
 	                            
@@ -109,13 +110,13 @@
 	                            	out.println("(indice: " + question.get("description") + ")");
 	                            	out.println("</div>");
 	                            	
-	                            	out.println("<form>");
-	                            	out.println("<input type=\"text\" name=\"answer" + questionId + "\">");
-	                            	out.println("</form>");
+	                            	
+	                            	out.println("<input type=\"text\" name=\"user-answer-" + questionId + "\">");
+	                            	
 	                            	questionId++;
 	                            }
 	                            %>
-							    <form action=JudgeTest.do method="post">
+							    
 							    	<input type="submit" value="Soumettez">
 							    </form>
                            
