@@ -1,3 +1,4 @@
+<%@page import="com.example.model.PrepareQuestion"%>
 <%@ page import="java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -100,7 +101,18 @@
                         <header class="entry-header">
                             <div class="entry-content">
 	                            <%
-								
+								ArrayList<String> results = (ArrayList<String>)request.getAttribute("results");
+	                            int score = (int)request.getAttribute("score");
+	                            
+	                            for(int questionId = 1; questionId <= PrepareQuestion.getQuestionNum(); questionId++) {
+	                            	out.println("<div class=\"entry-content-example\">");
+	                            	out.println("Q" + questionId + ":" + "<br>");
+	                            	out.println(results.get(questionId - 1));
+	                            	out.println("</div>");
+	                            }
+	                            
+	                            out.println("Félicitation! Votre score est de " + score + "/" + results.size() + ".");
+	                            
 	                            %>
 	                            <button type="button" onclick="location.href='index.html'">Rentrez</button>       
                            </div><!-- .entry-content -->
