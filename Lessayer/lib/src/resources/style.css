@@ -2137,7 +2137,8 @@ ul.black-doted {
     color: #19c880;
 }
 
-.single-blog-post .page-header-overlay input[type="submit"], button {
+.single-blog-post .page-header-overlay input[type="submit"],
+.single-blog-post .page-header-overlay button {
     display: block;
     padding: 16px 32px;
     margin-top: 40px;
