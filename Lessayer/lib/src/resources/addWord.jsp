@@ -20,9 +20,6 @@
     <!-- themify-icons CSS -->
     <link rel="stylesheet" href="css/themify-icons.css">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="css/swiper.min.css">
-
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -175,12 +172,6 @@
         </div><!-- .footer-widgets -->
 
     </footer><!-- .site-footer -->
-
-    <script type='text/javascript' src='js/jquery.js'></script>
-    <script type='text/javascript' src='js/swiper.min.js'></script>
-    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
-    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
-    <script type='text/javascript' src='js/custom.js'></script>
 
 </body>
 
