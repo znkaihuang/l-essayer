@@ -6,7 +6,7 @@ import java.util.HashMap;
 import lessayer.word.ReadWriteWord;
 
 public class PrepareQuestion {
-	private int questionNum = 5;
+	private static int questionNum = 5;
 	private ArrayList<HashMap<String, String>> questionArray;
 	private ArrayList<String> answerArray;
 
@@ -23,7 +23,7 @@ public class PrepareQuestion {
 		 }
 	}
 	
-	public int getQuestionNum() {
+	public static int getQuestionNum() {
 		return questionNum;
 	}
 
