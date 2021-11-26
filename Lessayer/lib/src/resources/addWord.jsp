@@ -117,7 +117,7 @@
                     	out.print("<p class=\"definition\">" + request.getAttribute("definition") + "</p>");
                     	out.print("<p class=\"example\">" + request.getAttribute("example") + "</p>");
 					%>
-					
+					<button type="button" onclick="location.href='add-word.html'">Rentrez</button> 
                 </div><!-- .contact-form -->
             </div><!-- .col -->
 

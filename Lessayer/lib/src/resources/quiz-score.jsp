@@ -111,7 +111,7 @@
 	                            out.println("Félicitation! Votre score est de " + score + "/" + results.size() + ".");
 	                            
 	                            %>
-	                            <button type="button" onclick="location.href='index.html'">Rentrez</button>       
+	                            <button type="button" onclick="location.href='spelling-quiz.html'">Rentrez</button>       
                            </div><!-- .entry-content -->
                         </header><!-- .entry-header -->
                     </div><!-- .col -->
