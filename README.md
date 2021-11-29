@@ -82,6 +82,12 @@ Some more advanced improvements are taken into consideration but not implement y
 - [ ] The system contains a spelling quiz. This is too limited. Grammar quiz, semantic quiz, etc., can more enrich this system.
 - [ ] ...
 
+Some codes need to be refactored. For example, one can find many JSP scriplets in the .jsp files. It is not a wise choice to
+
+use scriplets and should have other better replacement, like JSTL. 
+
+Look forward to refactors and improvements in the futre.
+
 ## Sources
 
 The front-end applies the template from [ThemeWagon](https://themewagon.com/) [Ezuca](https://themewagon.com/themes/free-html5-education-template-ezuca/).
@@ -90,3 +96,4 @@ The front-end applies the template from [ThemeWagon](https://themewagon.com/) [E
 
 ## Contact
 
+zkhuang@protonmail.com
