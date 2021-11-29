@@ -2,7 +2,7 @@
 
 **Notice: This is just a demonstrated project but strive to reach the criteria of a Minimum viable product.**
 
-L'ESSAYER is an interactive on-line French learning system to help French beginner learn with an amiable way.
+***L'ESSAYER*** is an interactive on-line French learning system to help French beginner learn with an amiable way.
 
 See the following contents to discover more!
 
@@ -17,7 +17,7 @@ See the following contents to discover more!
 
 ## Introduction
 
-L'ESSAYER is an on-line French learning system that is designed for a French beginner. Some specialized features are as follows:
+***L'ESSAYER*** is an on-line French learning system that is designed for a French beginner. Some specialized features are as follows:
 
 - [x] User customized vocabulary
 - [x] On-line spelling quiz system for user customized vocabulary
@@ -79,14 +79,12 @@ This is a personal demonstrated project while still some minor(?) defects. See h
 Some more advanced improvements are taken into consideration but not implement yet.
 
 - [ ] The user-customized glossary only allows user to add nouns while verbs, adjectives, adverbs, etc., are not supported.
-- [ ] The system contains a spelling quiz. This is too limited. Grammar quiz, semantic quiz, etc., can more enrich this system.
+- [ ] The system only contains a spelling quiz. This is too limited. Grammar quiz, semantic quiz, etc., can more enrich this system.
 - [ ] ...
 
-Some codes need to be refactored. For example, one can find many JSP scriplets in the .jsp files. It is not a wise choice to
+Some codes need to be refactored. For example, one can find many JSP scriplets in the .jsp files. It is not a wise choice to 
 
-use scriplets and should have other better replacement, like JSTL. 
-
-Look forward to refactors and improvements in the futre.
+use scriplets and should have other better replacement, like JSTL. Look forward to refactors and improvements in the futre.
 
 ## Sources
 
