@@ -10,9 +10,8 @@ See the following contents to discover more!
 * [Introduction](#introduction)
 * [Illustrations](#illustrations)
 * [Launch](#launch)
-* [Project status](#project-status)
+* [Project status](#project-status-and-room-for-improvement)
 * [Sources](#sources)
-* [Room for Improvement](#room-for-improvement)
 * [Acknowledgement](#acknowledgement)
 * [Contact](#contact)
 
@@ -47,24 +46,24 @@ the connection to the database. Please replace the connection in the methods sav
 
 ```
 
-	public static boolean saveWordToDatabase(Word word) {
-		// TODO Auto-generated method stub
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conn = DriverManager.getConnection(<DATABASE>, <USER>, <PASSWORD>);
-			.....
-	}
+public static boolean saveWordToDatabase(Word word) {
+	// TODO Auto-generated method stub
+	try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection conn = DriverManager.getConnection(<DATABASE>, <USER>, <PASSWORD>);
+		...
+}
 ```
 ```
 
-	public static ArrayList<HashMap<String, String>> loadWordFromDatabase(int questionNum) {
-		// TODO Auto-generated method stub
-		ArrayList<HashMap<String, String>> questionArray = null;
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conn = DriverManager.getConnection(<DATABASE>, <USER>, <PASSWORD>);
-			.....
-	}
+public static ArrayList<HashMap<String, String>> loadWordFromDatabase(int questionNum) {
+	// TODO Auto-generated method stub
+	ArrayList<HashMap<String, String>> questionArray = null;
+	try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection conn = DriverManager.getConnection(<DATABASE>, <USER>, <PASSWORD>);
+		...
+}
 ```
 
 A sampled database is provided under the directory [database](database). Then, generate the war 
@@ -73,14 +72,21 @@ archive with all the compiled classes and deploy the war file to your web applic
 
 Bonne chance!
 
-## Project status
+## Project status and room for improvement
 
+This is a personal demonstrated project while still some minor(?) defects. See https://github.com/znkaihuang/l-essayer/issues.
 
+Some more advanced improvements are taken into consideration but not implement yet.
+
+- [ ] The user-customized glossary only allows user to add nouns while verbs, adjectives, adverbs, etc., are not supported.
+- [ ] The system contains a spelling quiz. This is too limited. Grammar quiz, semantic quiz, etc., can more enrich this system.
+- [ ] ...
 
 ## Sources
 
-## Room for Improvement
+The front-end applies the template from [ThemeWagon](https://themewagon.com/) [Ezuca](https://themewagon.com/themes/free-html5-education-template-ezuca/).
 
 ## Acknowledgement
 
 ## Contact
+
