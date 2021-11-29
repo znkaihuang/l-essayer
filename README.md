@@ -30,13 +30,52 @@ This can strengthen the impression of the words entering by the users and achiev
 French grammar rules which are mostly shown in the format of tables to ensure the learners can quickly master the key points of the grammar rules. 
 
 ## Illustrations
-![homepage.png](Illustrations/homepage.png)
-![grammar_rules.png](Illustrations/grammar_rules.png)
-![add_new_word.png](Illustrations/add_new_word.png)
-![spelling_quiz.png](Illustrations/spelling_quiz.png)
+- Home page
+![homepage.png](illustrations/homepage.png)
+- Grammar rules page
+![grammar_rules.png](illustrations/grammar_rules.png)
+- Customize vocabulary screen
+![add_new_word.png](illustrations/add_new_word.png)
+- Spelling quiz page
+![spelling_quiz.png](illustrations/spelling_quiz.png)
+
 ## Launch
 
+This project is established by the build tool Gradle and written in Java(JSP + Servlet + MySQL). Before launch this project, one should first modify
+
+the connection to the database. Please replace the connection in the methods saveWordToDatabase(Word word) and loadWordFromDatabase(int questionNum)(Word word).
+
+```
+
+	public static boolean saveWordToDatabase(Word word) {
+		// TODO Auto-generated method stub
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection conn = DriverManager.getConnection(<DATABASE>, <USER>, <PASSWORD>);
+			.....
+	}
+```
+```
+
+	public static ArrayList<HashMap<String, String>> loadWordFromDatabase(int questionNum) {
+		// TODO Auto-generated method stub
+		ArrayList<HashMap<String, String>> questionArray = null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection conn = DriverManager.getConnection(<DATABASE>, <USER>, <PASSWORD>);
+			.....
+	}
+```
+
+A sampled database is provided under the directory [database](database). Then, generate the war 
+
+archive with all the compiled classes and deploy the war file to your web application server.
+
+Bonne chance!
+
 ## Project status
+
+
 
 ## Sources
 
