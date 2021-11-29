@@ -1,4 +1,4 @@
-#![L'ESSAYER](Lessayer/lib/src/resources/images/logo.png)
+# ![L'ESSAYER](Lessayer/lib/src/resources/images/logo.png)
 
 **Notice: This is just a demonstrated project but strive to reach the criteria of a Minimum viable product.**
 
@@ -30,10 +30,10 @@ This can strengthen the impression of the words entering by the users and achiev
 French grammar rules which are mostly shown in the format of tables to ensure the learners can quickly master the key points of the grammar rules. 
 
 ## Illustrations
-![homepage.png](illustrations/homepage.png)
-![homepage.png](illustrations/homepage.png)
-![homepage.png](illustrations/homepage.png)
-![homepage.png](illustrations/homepage.png)
+![homepage.png](Illustrations/homepage.png)
+![grammar_rules.png](Illustrations/grammar_rules.png)
+![add_new_word.png](Illustrations/add_new_word.png)
+![spelling_quiz.png](Illustrations/spelling_quiz.png)
 ## Launch
 
 ## Project status
