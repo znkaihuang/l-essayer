@@ -1,6 +1,6 @@
 # ![L'ESSAYER](Lessayer/lib/src/resources/images/logo.png)
 
-**Notice: This is just a personal practical project for constructing a web application using JSP + Servlet + MySQL.**
+**Notice: This is just a personal practicing project for constructing a web application using JSP + Servlet + MySQL.**
 
 ***L'ESSAYER*** is an interactive on-line French learning system to help French beginner learn with an amiable way.
 
