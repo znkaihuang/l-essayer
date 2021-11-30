@@ -1,6 +1,6 @@
 # ![L'ESSAYER](Lessayer/lib/src/resources/images/logo.png)
 
-**Notice: This is just a demonstrated project but strive to reach the criteria of a Minimum viable product.**
+**Notice: This is just a personal practical project for constructing a web application using JSP + Servlet + MySQL.**
 
 ***L'ESSAYER*** is an interactive on-line French learning system to help French beginner learn with an amiable way.
 
@@ -22,11 +22,13 @@ See the following contents to discover more!
 - [x] User customized vocabulary
 - [x] On-line spelling quiz system for user customized vocabulary
 
-User can construct their own word lists, as the interactive on-line spelling quiz system generates a spelling quiz according to user's own glossary.
+User can construct their own word lists, as the interactive on-line spelling quiz system generates a spelling quiz according to user's 
 
-This can strengthen the impression of the words entering by the users and achieve the goal to memorize words. L'ESSAYER also provides some common 
+own glossary. This can strengthen the impression of the words entering by the users and achieve the goal to memorize words. L'ESSAYER 
 
-French grammar rules which are mostly shown in the format of tables to ensure the learners can quickly master the key points of the grammar rules. 
+also provides some common French grammar rules which are mostly shown in the format of tables to ensure the learners can quickly 
+
+master the key points of the grammar rules. 
 
 ## Illustrations
 - Home page
@@ -74,7 +76,9 @@ Bonne chance!
 
 ## Project status and room for improvement
 
-This is a personal demonstrated project while still some minor(?) defects. See https://github.com/znkaihuang/l-essayer/issues.
+This is a personal demonstrated project but strive to  make its basic features as complete as possible.
+
+Though, some minor(?) defects can be observed. See https://github.com/znkaihuang/l-essayer/issues.
 
 Some more advanced improvements are taken into consideration but not implement yet.
 
@@ -82,9 +86,9 @@ Some more advanced improvements are taken into consideration but not implement y
 - [ ] The system only contains a spelling quiz. This is too limited. Grammar quiz, semantic quiz, etc., can more enrich this system.
 - [ ] ...
 
-Some codes need to be refactored. For example, one can find many JSP scriplets in the .jsp files. It is not a wise choice to 
+Codes need to be refactored. For example, one can find many JSP scriplets in the .jsp files. It is not a wise choice to 
 
-use scriplets and should have other better replacement, like JSTL. Look forward to refactors and improvements in the futre.
+use scriplets and should have other better replacement, like JSTL. Look forward to refactors and improvements in the future.
 
 ## Sources
 
