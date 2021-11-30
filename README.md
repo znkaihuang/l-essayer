@@ -42,9 +42,11 @@ master the key points of the grammar rules.
 
 ## Launch
 
-This project is established by the build tool Gradle and written in Java(JSP + Servlet + MySQL). Before launch this project, one should first modify
+This project is established by the build tool Gradle and written in Java(JSP + Servlet + MySQL). Before launch this project, 
 
-the connection to the database. Please replace the connection in the methods saveWordToDatabase(Word word) and loadWordFromDatabase(int questionNum)(Word word).
+one should first modify the connection to the database. Please replace the connection in the methods saveWordToDatabase(Word word) 
+
+and loadWordFromDatabase(int questionNum)(Word word).
 
 ```
 
@@ -68,9 +70,9 @@ public static ArrayList<HashMap<String, String>> loadWordFromDatabase(int questi
 }
 ```
 
-A sampled database is provided under the directory [database](database). Then, generate the war 
+A sampled database is provided under the directory [database](database). Then, generate the war archive with all the compiled classes
 
-archive with all the compiled classes and deploy the war file to your web application server.
+ and deploy the war file to your web application server.
 
 Bonne chance!
 
