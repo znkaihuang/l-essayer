@@ -6,6 +6,8 @@
 
 See the following contents to discover more!
 
+[Click here to access the demonstrated video!](l_essayer_demo.mp4)
+
 ## Tablet of contents
 * [Introduction](#introduction)
 * [Illustrations](#illustrations)
