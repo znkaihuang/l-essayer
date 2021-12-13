@@ -6,7 +6,7 @@
 
 See the following contents to discover more!
 
-[Click here to access the demonstrated video!](l_essayer_demo.mp4)
+[Click here to access the demonstrated video!](https://streamable.com/d1awoi)
 
 ## Tablet of contents
 * [Introduction](#introduction)
